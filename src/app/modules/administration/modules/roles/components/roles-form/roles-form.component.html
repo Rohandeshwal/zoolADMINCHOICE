@@ -1,0 +1,110 @@
+<div class="form-wrapper">
+    <form class="form">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <h6>Role Name</h6>
+  
+            <input type="text" class="form-control" placeholder="Object Name">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <h6>Description</h6>
+        <quill-editor   > </quill-editor>
+    
+      </div>
+      <!-- <div class="row">
+        <div class="col">
+          <div class="upload-btn-wrapper">
+            <div>
+              <img src="./assets/images/ico-file-format.svg"> </div>
+            <button class="btn btn-upload_icon">Icon Image</button>
+            <div class="upload-doc">
+              <img src="./assets/images/upload-arrow.png" alt="" class="upload-icon">
+            </div>
+            <input type="file" name="myfile" class="file" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group url">
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+            <input type="text" class="form-control url-input" id="exampleFormControlInput2" placeholder="Enter URL">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="upload-btn-wrapper">
+            <div>
+              <img src="./assets/images/pdf.png"> </div>
+            <button class="btn btn-upload_document">Upload Document</button>
+            <div class="upload-doc">
+              <img src="./assets/images/upload-arrow.png" alt="" class="upload-icon">
+            </div>
+            <input type="file" name="myfile" class="file" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="upload-btn-wrapper">
+            <div class="">
+              <img src="./assets/images/play-button.svg" class="play-icon"> </div>
+            <button class="btn btn-upload_document">Upload Video</button>
+            <div class="upload-doc">
+              <img src="./assets/images/upload-arrow.png" alt="" class="upload-icon">
+            </div>
+            <input type="file" name="myfile" class="file" />
+          </div>
+        </div>
+      </div> -->
+      
+        <table class="table table-borderless table-responsive-lg mb-0">
+          <thead class="listing-header">
+          
+          
+            <th class="listing-header_text">Create</th>
+            <th class="listing-header_text">Edit</th>
+            <th class="listing-header_text">Delete</th>
+          </thead>
+          <tbody class="">
+            <tr class="listing-data text-center  mx-auto"> 
+             
+              <td class="listing-data_info">
+                <div class="custome-check-box">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" name="" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </td>
+              <td class="listing-data_info">
+                <div class="custome-check-box">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" name="" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </td>
+              <td class="listing-data_info">
+                <div class="custome-check-box">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" name="" />
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+ 
+      <div class="d-flex justify-content-center button">
+        <div class="back marr-10 marl-10">
+          <button type="button" class="back-btn" [routerLink]="['../list']">BACK</button>
+        </div>
+        <div class="add marr-10 marl-10">
+          <button type="button" class="add-btn" [routerLink]="['../list']">SAVE</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  

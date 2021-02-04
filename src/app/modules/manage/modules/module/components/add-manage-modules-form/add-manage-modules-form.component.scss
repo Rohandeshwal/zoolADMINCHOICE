@@ -1,0 +1,54 @@
+@import'../../../../../../../assets/styles/common.scss';
+
+.form-arrow-icon {
+    right: 0px;
+    height: 100%;
+}
+
+.url {
+    // margin: 10px 0px;
+    position: relative;
+}
+
+.user-input-update {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+
+.icon-position {
+    // top:12px;
+}
+
+.upload-btn-wrapper {
+    top: 12px;
+}
+
+.videos-url {
+    top: 12px;
+}
+
+.optional-data {
+    padding-top: 3vh;
+}
+
+.uploaded {
+    justify-content: space-between;
+}
+
+
+.ellipse {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    width: 100%;
+}
+
+.crossIcon {
+    margin: auto;
+    color: #707070;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}

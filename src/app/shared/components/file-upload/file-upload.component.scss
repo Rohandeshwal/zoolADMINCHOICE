@@ -1,0 +1,62 @@
+@import '../../../../assets/styles/variable.scss';
+.container {
+  border: 2px dashed rgba(185, 161, 161, 0.34);
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-upload-icon {
+  padding-top: 38px;
+}
+
+.cloud-class {
+  height: 10vh;
+}
+
+.download-icon {
+  padding-right: 12px;
+  padding-top: 6px;
+}
+
+.template-download {
+  width: 100%;
+  padding: 12px;
+}
+
+.drag-text {
+  color: $primaryMidnightBlue;
+  font-size: $secondaryFontSize !important;
+  padding: 20px;
+}
+
+.upload-text {
+  color: $secondaryBlue;
+  font-size: $tertiaryFontSize;
+}
+
+.download-template {
+  color: $primaryMidnightBlue;
+  font-size: $secondaryFontSize;
+}
+
+.line1 {
+  border-left: 1px solid $primaryMidnightBlue;
+  height: 156px;
+  width: 0px;
+  margin: 0 auto;
+  opacity: 0.27;
+}
+
+.upload-csv {
+  padding: 60px 36px;
+}
+
+.upload-file {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}

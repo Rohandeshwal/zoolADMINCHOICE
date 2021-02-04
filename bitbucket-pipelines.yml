@@ -1,0 +1,36 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+pipelines:
+  tags:
+    release-*:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm install -g @angular/cli
+            - ng build --prod
+            - ls -ltr
+            - cd dist/adminChoiceBoard
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID # Optional if already defined in the context.
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY # Optional if already defined in the context.
+                AWS_DEFAULT_REGION: 'ap-south-1' # Optional if already defined in the context.
+                # ACL: 'public-read' # Optional.
+                S3_BUCKET: 'choiceboardadmin-dev'
+                LOCAL_PATH: $(pwd)
+                # CONTENT_ENCODING: '<string>' # Optional.
+                # STORAGE_CLASS: '<string>' # Optional.
+                # CACHE_CONTROL: '<string>' # Optional.
+                # EXPIRES: '<timestamp>' # Optional.
+                # DELETE_FLAG: '<boolean>' # Optional.
+                # EXTRA_ARGS: '<string>' # Optional.
+                # DEBUG: '<boolean>' # Optional.  
+
+

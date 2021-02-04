@@ -1,0 +1,92 @@
+<div class="">
+  <button class="optional-info btn" (click)="viewField()">Optional Information </button>
+</div>
+<div *ngIf="showTextField">
+  <div class="">
+    <h6>Enter link</h6>
+    <div class="docs" *ngFor="let url of links.links, let i = index">
+      <div class="d-flex form-group py-2">
+        <div class="form-group col-10 url pl-0">
+          <i class="fa fa-paperclip" aria-hidden="true"></i>
+          <input type="text" class="form-control url-input" id="exampleFormControlInput3" placeholder="Enter link"
+            [(ngModel)]="links.links[i].url" name="links.links{{i}}.url">
+        </div>
+
+        <div class="col-2 justify-content-between pl-0 d-flex icon-position">
+          <div *ngIf="i > 0">
+            <button type="button" class="btn common-remove_btn" (click)="removeURL(i)"><img
+                src="./assets/images/delete.svg" class="btn-case_add"></button>
+          </div>
+          <div *ngIf="links.links.length-1==i">
+            <button class="btn common-add_btn" type="button" (click)="addURL()">
+              <img src="./assets/images/add.svg" class="btn-case_add">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="">
+    <h6>Enter Document Link</h6>
+      <div class="docs my-2" *ngFor="let url of links.documents, let i = index">
+      <div class="d-flex form-group">
+        <div class="form-group col-10 url pl-0">
+
+          <i class="fa fa-paperclip" aria-hidden="true"></i>
+          <input type="text" class="form-control url-input" id="exampleFormControlInput3"
+            placeholder="Enter Document Link" [(ngModel)]="links.documents[i].url" name="links.documents{{i}}.url">
+        </div>
+
+        <div class="col-2 justify-content-between pl-0 d-flex icon-position">
+          <div *ngIf="i > 0">
+            <button type="button" class="btn common-remove_btn" (click)="removeDOC(i)"><img
+                src="./assets/images/delete.svg" class="btn-case_add"></button>
+          </div>
+          <div *ngIf="links.documents.length-1==i">
+            <button class="btn common-add_btn" type="button" (click)="addDOC()">
+              <img src="./assets/images/add.svg" class="btn-case_add">
+            </button>
+          </div>
+        </div>
+      </div>
+      <span class="info mr-2">*Share the document link from</span>
+      <a href="http://drive.google.com/" target="_blank"> <span class="mr-2"> <img class="gDrive"
+            src="../../../../../assets/images/google-drive.png" alt=""> </span> </a>
+      <a href="http://dropbox.com/" target="_blank"> <span class="mr-2"> <img class="dropbox"
+            src="../../../../../assets/images/dropbox.png" alt=""> </span> </a>
+      <a href="http://box.com/" target="_blank"> <span class="mr-2"> <img class="dropbox"
+            src="../../../../../assets/images/box.png" alt=""> </span> </a>
+      <a href="http://onedrive.com/" target="_blank"> <span> <img class="dropbox"
+            src="../../../../../assets/images/onedrive.png" alt=""> </span> </a>
+
+
+    </div>
+  </div>
+  <div class="">
+    <h6>Enter Video Link</h6>
+    <div class="videos-url" *ngFor="let url of links.videos, let i = index">
+      <div class="d-flex form-group">
+        <div class="form-group col-10 url pl-0">
+          <div class="video-url">
+            <img src="./assets/images/play-button.svg" class="play-icon"> </div>
+          <input type="text" class="form-control url-input" id="exampleFormControlInput3" placeholder="Enter Video Link"
+            [(ngModel)]="links.videos[i].url" name="links.videos{{i}}.url">
+        </div>
+        <div class="col-2 justify-content-between pl-0 d-flex icon-position">
+          <div *ngIf="i > 0">
+            <button type="button" class="btn common-remove_btn" (click)="removeVideoURL(i)"><img
+                src="./assets/images/delete.svg" class="btn-case_add"></button>
+          </div>
+          <div *ngIf="links.videos.length-1==i">
+            <button class="btn common-add_btn" type="button" (click)="addVideoURL()">
+              <img src="./assets/images/add.svg" class="btn-case_add">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="add-wrapper">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">Edit Business Component Relationship </h2>
+        <div class="back marr-10 marl-10">
+            <button type="button" class="btn btn-dark btn-md " (click)="onBack()">BACK</button>
+        </div>
+    </div>
+    <div class="form-wrapper mt-4 ">
+        <form class="form">
+            <div class="readonly-field">
+                <div class="form-group mb-3 mt-1
+                 d-flex">
+
+                    <div class="form-icon col-4">
+                        <h6>Hierarchy</h6>
+                        <h4> BC 1</h4>
+                    </div>
+                    <div class="form-icon col-4">
+                        <h6> Module</h6>
+                        <h4> BC 1</h4>
+                    </div>
+                    <div class="form-icon col-5">
+                        <h6>Business Component </h6>
+                        <h4> BC 1</h4>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group mb-3 d-flex">
+                    <div class="form-icon col-4">
+                        <h6>Hierarchy</h6>
+                        <h4> BC 1</h4>
+                    </div>
+                    <div class="form-icon col-4">
+                        <h6>Module*</h6>
+                        <h4> BC 1</h4>
+                    </div>
+                    <div class="form-icon col-5">
+                        <h6>Business Component *</h6>
+                        <h4> BC 1</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-icon col-10">
+                <h6> Select Relation Type*</h6>
+                <select class="form-control" (change)="getRelationData($event)">
+                    <option [value]=" " selected>--Select--</option>
+                    <option *ngFor="let type of relationTypeData, let i = index" [value]="type?.relationTypeId">
+                        {{type.name}}</option>
+                </select>
+
+                <div class="form-arrow-icon1">
+                    <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                </div>
+            </div>
+            <div class="form-group col-10">
+                <h6>Description</h6>
+                <textarea class="form-control" cols="3" rows="2" name="description"
+                    placeholder="Enter Description "></textarea>
+
+            </div>
+            <div>
+            </div>
+            <div class="d-flex justify-content-start button">
+                <div class="add marr-10 marl-10">
+                    <button type="button" class="btn btn-success btn-md">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

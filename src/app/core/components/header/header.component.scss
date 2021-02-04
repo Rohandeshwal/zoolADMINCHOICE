@@ -1,0 +1,152 @@
+@import "../../../../assets/styles/variable.scss";
+
+.header {
+  height: 60px;
+  box-shadow: 3.716px 3.346px 40px 0px rgba(43, 43, 43, 0.1) !important;
+  padding: 0 10px;
+  background: white;
+  position: relative;
+  border-bottom: 1px solid #dede;
+
+  .logo {
+    padding: 10px 0;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .header-wrapper {
+    padding: 16px 0px;
+    width: 40%;
+  }
+
+  .search-text {
+    border: $searchBorder;
+    border-radius: 33px;
+    width: 238px;
+    height: 41px;
+    opacity: 1;
+  }
+
+  .notification-icon {
+    padding: 12px 0;
+    cursor: pointer;
+  }
+
+  .setting-icon {
+    padding: 12px 0;
+    cursor: pointer;
+  }
+
+  .search-container {
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+      /* right: 133px; */
+      top: 13px;
+      opacity: 0.5;
+      right: 22px;
+    }
+
+    .input-text {
+      padding: 6px;
+    }
+  }
+
+  .profile-wrapper {
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .profile-text {
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .profile-image {
+    background-image: url("../../../../assets/images/profile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin-top: -2px;
+  }
+
+  // .prof {
+  //    border-radius: 50%;
+  //    width: 45px;
+  //    height: 45px;
+  //  }
+  .profile {
+    .user-name {
+      font-size: $secondaryFontSize;
+      font-weight: $sixhundred;
+      line-height: 1.2;
+    }
+
+    .user-tag {
+      font-size: $smallFontSize;
+      color: $primaryGrey;
+      font-weight: $sixhundred;
+      text-align: right;
+      line-height: 1.2;
+    }
+  }
+
+  .profile-tool-bar {
+    background: $primaryColor;
+    color: $primaryWhite;
+    position: absolute;
+    top: 82px;
+    width: 224px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    z-index: 9;
+
+    .tool-bar-item {
+      line-height: 2.5;
+      padding: 0 20px;
+      border-radius: 20px;
+      color: $primaryWhite;
+
+      &:hover,
+      &:active {
+        background: $primaryYellow;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .username-text {
+    color: $primaryColor;
+    font-size: 16px;
+    margin: -3px;
+  }
+
+  .user-admin {
+    margin-top: -6px;
+    font-size: 10px;
+    color: $primaryColor1;
+    margin-left: 4vh;
+  }
+
+  input {
+    padding-left: 12px;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+}

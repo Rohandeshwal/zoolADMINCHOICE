@@ -1,0 +1,297 @@
+// Primary font family
+$primaryFontFamily: "sans-serif", "Arial";
+$primaryfontfamilybold : "sans-serif Bold", "Arial";
+$secondaryFontFamily: "sans-serif Med", "Arial";
+$ternaryFontFamily: "sans-serif Medium";
+//Primary Colors
+$primaryWhite: #fff;
+$primaryColor:#343B41;
+$primaryColor1:#818181;
+$primaryColor2:#707070;
+$primaryColor3:#0000001A;
+$primaryColor4:#f1f1f1;
+$primaryColor5:#888;
+$primaryMidnightBlue: #034D7B;
+$primaryMidnightBlue2:#034D7D;
+$primaryOrange: #FF860D;
+$primaryYellow:#F8D648;
+$primaryWhite: #FFFFFF;
+$primaryBlack: #000000;
+$primaryGrey: #5A5A5A;
+$primaryGrey2: #AAAAAA;
+$primaryGrey3:#B7B7B7;
+$secondaryBlue:#2D2D2D;
+$skyblue:#8eb5ce;
+$primaryBiege: #F1F2F4;
+$linkedinBtn: #0E76A8;
+$Blue:#0077b5;
+$twitterBtn: #1DA1F2;
+
+// //Secondary Colors
+// $secondaryYellow: #FFCA00;
+// $secondaryGreen: #00B25E;
+// $secondaryScarlet: #FF2000;
+// $secondaryBeige2: #F7F5F7;
+// $secondaryGreyShade2: #D5CCD6;
+// $secondaryWhiteShade2 :#E3E6EA;
+// $secondaryGreenShade: #243228;
+// $secondaryGreyShade3: #78839C;
+// $primarySearchFor: #6A7B98;
+// //Font Colors
+// $primaryFontGreyShade4: #333333;
+// $primaryFontGreyShade5: #999999;
+// $primaryFontBlackShade1: #000000;
+// $primaryFontOrangeShade1: #FABF90;
+// $primaryFontOrangeShade2: #CD6800;
+// $secondaryFontOrange: #F47F64;
+// $secondaryFontOrange1: #DEAC47;
+// $primaryFontGreyShade6: #D7CFD8;
+// $primaryFontGreyShade7: #596479;
+// $primaryFontGreyShade8: #ccc;
+// $primaryFontRedShade1: #CD0000;
+// $primaryFontWhiteShade: #E9E5EA;
+// $primaryFontSeaGreenShade: #6BBD9E;
+// $infoColor: #607391;
+//Heading Sizes
+$primaryHeaderTop: 28px;
+$primaryInputLgSize: 24px;
+$inputSize: 22px;
+$secondaryHeadlinesSize: 20px;
+$primaryFontSize: 18px;
+$secondaryFontSize: 16px;
+$tertiaryFontSize: 14px;
+$smallFontSize: 12px;
+$tinyFontSize: 10px;
+//Font weights
+$fivehundred: 500;
+$threehundred: 300;
+$fourhundred: 400;
+$sixhundred: 600;
+// Border
+$inputBorder: 1px solid #eee;
+$cardBorder: 1px solid $primaryColor2;
+$searchBorder:1px solid #E5E5E5;
+// Box-Shadow
+$primaryBoxShadow:  0px 2px 3px $primaryColor3;
+$secondaryBoxShadow: 0px 3px 6px #00000029;
+  // Common Padding Classes
+  .pad-0 {
+    padding: 0 !important;
+  }
+  .padl-0 {
+    padding-left: 0 !important;
+  }
+  .padr-0 {
+    padding-right: 0 !important;
+  }
+  .padt-0 {
+    padding-top: 0 !important;
+  }
+  .padb-0 {
+    padding-bottom: 0 !important;
+  }
+  .pad-5 {
+    padding: 5px;
+  }
+  .padl-5 {
+    padding-left: 5px;
+  }
+  .padr-5 {
+    padding-right: 5px;
+  }
+  .padt-5 {
+    padding-top: 5px !important;
+  }
+  .padb-5 {
+    padding-bottom: 5px !important;
+  }
+  .pad-10 {
+    padding: 10px;
+  }
+  .padl-10 {
+    padding-left: 10px;
+  }
+  .padr-10 {
+    padding-right: 10px;
+  }
+  .padt-10 {
+    padding-top: 10px;
+  }
+  .padb-10 {
+    padding-bottom: 10px;
+  }
+  .pad-12 {
+    padding: 12px;
+  }
+  .padl-12 {
+    padding-left: 12px;
+  }
+  .padr-12 {
+    padding-right: 12px;
+  }
+  .padt-12 {
+    padding-top: 12px;
+  }
+  .padb-12 {
+    padding-bottom: 12px;
+  }
+  .pad-15 {
+    padding: 15px;
+  }
+  .padl-15 {
+    padding-left: 15px;
+  }
+  .padr-15 {
+    padding-right: 15px;
+  }
+  .padt-15 {
+    padding-top: 15px;
+  }
+  .padb-15 {
+    padding-bottom: 15px;
+  }
+  .pad-20 {
+    padding: 20px;
+  }
+  .padl-20 {
+    padding-left: 20px;
+  }
+  .padl-30 {
+    padding-left: 30px;
+  }
+  .padr-20 {
+    padding-right: 20px;
+  }
+  .padt-20 {
+    padding-top: 20px;
+  }
+  .padb-20 {
+    padding-bottom: 20px;
+  }
+  .padb-30 {
+    padding-bottom: 30px;
+  }
+  // Common Margin Classes
+  .mar-0 {
+    margin: 0 !important;
+  }
+  .marl-0 {
+    margin-left: 0 !important;
+  }
+  .marr-0 {
+    margin-right: 0 !important;
+  }
+  .mart-0 {
+    margin-top: 0 !important;
+  }
+  .marb-0 {
+    margin-bottom: 0 !important;
+  }
+  .mar-5 {
+    margin: 5px !important;
+  }
+  .marl-5 {
+    margin-left: 5px !important;
+  }
+  .marr-5 {
+    margin-right: 5px;
+  }
+  .mart-5 {
+    margin-top: 5px !important;
+  }
+  .marb-5 {
+    margin-bottom: 5px !important;
+  }
+  .mar-10 {
+    margin: 10px;
+  }
+  .marl-10 {
+    margin-left: 10px;
+  }
+  .marr-10 {
+    margin-right: 10px;
+  }
+  .mart-10 {
+    margin-top: 10px;
+  }
+  .marb-10 {
+    margin-bottom: 10px;
+  }
+  .mar-15 {
+    margin: 15px;
+  }
+  .marl-15 {
+    margin-left: 15px;
+  }
+  .marr-15 {
+    margin-right: 15px;
+  }
+  .mart-15 {
+    margin-top: 15px;
+  }
+  .marb-15 {
+    margin-bottom: 15px !important;
+  }
+  .mar-20 {
+    margin: 20px;
+  }
+  .marl-20 {
+    margin-left: 20px;
+  }
+  .marr-20 {
+    margin-right: 20px;
+  }
+  .mart-20 {
+    margin-top: 20px;
+  }
+  .marb-20 {
+    margin-bottom: 20px !important;
+  }
+  .mar-25 {
+    margin: 25px;
+  }
+  .marl-25 {
+    margin-left: 25px;
+  }
+  .marr-25 {
+    margin-right: 25px;
+  }
+  .mart-25 {
+    margin-top: 25px;
+  }
+  .marb-25 {
+    margin-bottom: 25px;
+  }
+  .mar-30 {
+    margin: 30px;
+  }
+  .marl-30 {
+    margin-left: 30px;
+  }
+  .marr-30 {
+    margin-right: 30px;
+  }
+  .mart-30 {
+    margin-top: 30px;
+  }
+  .marb-30 {
+    margin-bottom: 30px;
+  }
+  .mar-35 {
+    margin: 35px;
+  }
+  .marl-35 {
+    margin-left: 35px;
+  }
+  .marr-35 {
+    margin-right: 35px;
+  }
+  .mart-35 {
+    margin-top: 35px;
+  }
+  .marb-35 {
+    margin-bottom: 35px;
+  }
+
+
+  

@@ -1,0 +1,31 @@
+@import'../../../../../../../assets/styles/common.scss';
+
+.form-arrow-icon{
+    right: 2px;
+    height: 33px;
+    width: 17px;
+    }
+    
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+    }
+    .heading{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .modal-body{
+        padding: 2rem;
+    }
+    .contextContent {
+        height: 300px !important;
+        overflow-x: hidden;
+    }
+    .invalid-input-error{
+        width: 100%;
+        margin-top: .25rem;
+        font-size: 80%;
+        color: #dc3545;
+    }

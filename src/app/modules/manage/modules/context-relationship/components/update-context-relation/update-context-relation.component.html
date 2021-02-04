@@ -1,0 +1,88 @@
+<div class="add-wrapper">
+  <div class="add-header d-flex justify-content-between">
+    <h2 class="heading">Look Up Relationship</h2>
+    <div class="back marr-10 marl-10">
+      <button type="button" class="btn btn-dark btn-md " [routerLink]="['../../list']">
+        BACK
+      </button>
+    </div>
+  </div>
+  <div class="add-form">
+    <form class="form" #relationshipForm="ngForm" novalidate>
+      <div class="row">
+        <div class="col-4">
+          <h6>Parent Context*</h6>
+          <ng-select [items]="availableContext1Dropdown" bindLabel="item_text" bindValue="item_id"
+            [(ngModel)]="parentContext" name="parent_context" #parent_context="ngModel"
+            [ngClass]="{ 'is-invalid': submitted && parent_context.invalid }" required disabled>
+            <!-- (change)="onParentContextChange($event)" -->
+          </ng-select>
+          <div *ngIf="submitted && parent_context.invalid" class="invalid-feedback">
+            <div *ngIf="parent_context.errors.required">
+              Parent Context is required
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <h6>Parent Value*</h6>
+          <ng-select [items]="availableValues1Dropdown" bindLabel="item_text" bindValue="item_id"
+            [(ngModel)]="parentValue" name="parent_value" #parent_value="ngModel"
+            [ngClass]="{ 'is-invalid': submitted && parent_value.invalid }" required
+            (change)="onParentContextValueChange($event)">
+          </ng-select>
+          <div *ngIf="submitted && parent_value.invalid" class="invalid-feedback">
+            <div *ngIf="parent_value.errors.required">
+              Parent value is required
+            </div>
+          </div>
+        </div>
+        <div class="col-2 mt-4">
+          <button class="btn btn-link ft-10" (click)="showOverview()">Show Overview</button>
+        </div>
+      </div>
+      <div class="childValue mt-4">
+        <div class="row mt-2">
+          <div class="col-4">
+            <h6>Child Context*</h6>
+            <ng-select [items]="availableContext2Dropdown" bindLabel="item_text" bindValue="item_id"
+              [(ngModel)]="childContext" name="child_context" #child_context="ngModel"
+              [ngClass]="{ 'is-invalid': submitted && child_context.invalid }" required
+              (change)="onChildContextChange($event)">
+            </ng-select>
+            <div *ngIf="submitted && child_context.invalid" class="invalid-feedback">
+              <div *ngIf="child_context.errors.required">
+                Parent Context is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h6 class="mt-4">Child Values*</h6>
+        </div>
+        <div class="row ml-4 mt-2">
+          <div class="col-10">
+            <div class="dual-list-wrapper">
+              <div class="dual-list-groupa">
+                <h6>All Values</h6>
+                <ejs-listbox [dataSource]="availableValues2Dropdown" [fields]="setfield" height="330px"
+                  [toolbarSettings]="toolbar" scope="#listbox" #listbox1></ejs-listbox>
+              </div>
+              <div class="dual-list-groupb">
+                <h6>Selected Values</h6>
+                <ejs-listbox [dataSource]="oldChildValueOptions" [fields]="setfield" height="330px" id="listbox"
+                  #listbox2></ejs-listbox>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-end button">
+    <div class="add">
+      <button type="submit" (click)="updateRelation(relationshipForm)" class="btn btn-success btn-md ">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

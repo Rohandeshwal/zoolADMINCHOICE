@@ -1,0 +1,50 @@
+@import'../../../../../../../assets/styles/common.scss';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.childValue {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+
+
+.dual-list-groupa,
+.dual-list-groupb {
+    width: 48%;
+}
+
+.dual-list-groupa {
+    float: left;
+}
+
+.dual-list-groupb {
+    float: right;
+}
+
+.e-listbox-wrapper .e-list-item.e-selected {
+    background-color: #FF860D;
+    color: white !important;
+}
+
+.e-listbox-wrapper .e-list-parent {
+    margin: 0;
+    padding: 3px !important;
+}
+
+.e-listboxtool-wrapper.e-right .e-listbox-tool {
+    /* margin-left: 15px; */
+    margin: auto;
+    margin-left: 12px;
+}
+
+
+.ng-select.custom {
+    border: 0px;
+    min-height: 0px;
+    border-radius: 0;
+}
+
+.ng-select.custom .ng-select-container {
+    min-height: 0px;
+    border-radius: 0;
+}

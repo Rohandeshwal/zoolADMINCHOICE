@@ -1,0 +1,52 @@
+<div class="add-wrapper h-100">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">Team</h2>
+        <button class="btn btn-primary btn-sm" [routerLink]="['../add']"><span class="mx-2 plus-icon">+</span>ADD
+            TEAM</button>
+    </div>
+    <!-- <div class="search-group d-flex  justify-content-end">
+    
+        <input type="text" class="btn btn-filter" placeholder="Search">
+        <span class="search-icon"><img src="./assets/images/search.svg" class="icon-size"> </span>  
+                     
+    </div>
+    <div class="table-container mt-2 listing-container">
+        <table class="table table-borderless table-responsive-lg mb-0">
+            <thead class="listing-header">
+                <th class="listing-header_text">Team Name</th>        
+                <th class="listing-header_text">Description</th>      
+                     <th class="listing-header_text">Created On</th>        
+                <th class="listing-header_text text-center">Action</th>        
+        </thead>
+            <tbody class="scroll-content">
+                <tr class="listing-data mx-auto" *ngFor="let item of lookuplist | paginate: { itemsPerPage: 10, currentPage: p }">
+                    <td class="listing-data_text"><a [routerLink]="['../add']" class="link-text
+                        ">{{item.name}}</a></td>
+                        <td class="listing-data_text description ">
+                            <div [class.showtable]="item.visible" class="para-content">{{item.description}} </div>
+                                <button class="btn btn-read" type="button" (click)="item.visible = !item.visible">{{ item.visible ? 'Read less': '..Read more' }}</button>
+                        </td>
+                        
+                        <td>Kaffee</td>
+                    
+                        <td class="edit-side ">
+                            <div class="d-flex edit-side_icon justify-content-center ">
+                            <a [routerLink]="['../add']"><img class="edit-side_img mx-2" src="./assets/images/write.svg" /></a> &nbsp; 
+                            <a><img class="edit-side_img" src="./assets/images/delete.svg" /></a>
+                            </div>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class=" d-flex paginate">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+    </div> -->
+    <div class="w-100" style="height: calc(100% - 200px)">
+        <ag-grid-angular style="width: 100%; height: 100%;" class="ag-theme-alpine" [rowData]="rowData" pagination=true
+            [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" rowSelection='multiple'>
+            <!-- [icons]="icons" -->
+        </ag-grid-angular>
+    </div>
+
+</div>

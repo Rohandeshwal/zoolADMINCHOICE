@@ -1,0 +1,33 @@
+@import'../../../../../assets/styles/common.scss';
+.icon-body{
+    display: flex;
+    justify-content: center;
+}
+.icon-size{
+    height: 62px;
+    margin-top: 12px;
+ 
+    margin-bottom: 16px;
+}
+.btn-add{
+    border-radius: 5px;
+}
+.card-title{
+    text-align: center;
+    font-size: 12px;
+}
+.card-body{
+    padding: 3px 16px;;
+}
+.pie{
+    width: 428px !important;;
+    
+}
+.head{
+    font-size: 40px;
+}
+
+.card-heading{
+    font-size: 30px;
+    text-align: center;
+}

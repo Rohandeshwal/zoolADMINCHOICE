@@ -1,0 +1,19 @@
+<div class="add-wrapper h-100">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">Context Relationship Overview</h2>
+        <div>
+            <!-- <button class="btn btn-primary btn-sm" [routerLink]="['../add']"><span class="mx-2 plus-icon ">+</span>ADD -->
+            <!-- </button> -->
+            &nbsp;&nbsp;
+            <!-- <button class="btn btn-add" [routerLink]="['../add']"><span class="mx-2 plus-icon">+</span>EDIT</button> -->
+        </div>
+    </div>
+
+    <div class="w-100 py-3" style="height: calc(100% - 200px)">
+        <ag-grid-angular style=" height: 362px;" #moduleList class="ag-theme-alpine" [rowData]="rowData" pagination=true
+            [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" (gridReady)="onGridReady($event)"
+            rowSelection='multiple'>
+        </ag-grid-angular>
+    </div>
+</div>
+<div>

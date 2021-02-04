@@ -1,0 +1,77 @@
+@import'../../../../../../../assets/styles/common.scss';
+
+
+.scroll-content{
+    height: 344px;
+}
+.table-container {
+    width: 100%;
+    // height:100%;
+    height: 408px;
+    margin: 0 auto;
+    overflow: auto;
+    margin-top: 20px;
+
+    .listing-data {
+        &_info {
+            // padding:10px;
+            align-self: center;
+            text-align:left;
+
+
+        }
+
+        .listing-data--end {
+            .edit-side {
+
+                // width: 100px;
+                .img-content {
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    // .scroll-list{
+    //     height:400px;
+    //     // overflow-y:auto;
+    // }
+    td {
+        vertical-align: middle;
+        padding: 0px .75rem;
+        margin-right: 0px;
+    }
+
+    .twit-social_icon {
+        color: $twitterBtn;
+        font-size: $primaryFontSize;
+    }
+
+    .link-social_icons {
+        color: $Blue;
+        font-size: $primaryFontSize;
+    }
+    .link-img{
+        width: 14px;
+        height: 14px;
+    }
+    // .listing-data_{
+    //     padding:0px;
+
+    // }
+
+}
+
+@media screen and (min-width:1024px) and (max-width:1366px){
+    .scroll-content{
+        height:300px !important;
+    }
+    .listing-data_info{
+        font-size:12px !important;
+    }
+    .listing-header_text{
+        font-size:12px !important;
+    }
+}
+
+

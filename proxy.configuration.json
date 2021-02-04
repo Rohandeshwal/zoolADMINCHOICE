@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://3.132.218.171:9200/admin/",
+      "secure": false
+    }
+  }

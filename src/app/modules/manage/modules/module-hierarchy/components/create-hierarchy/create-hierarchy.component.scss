@@ -1,0 +1,19 @@
+@import "../../../../../../../assets/styles/common.scss";
+@import "../../../../../../../assets/styles/variable.scss";
+
+.add-card {
+    position: relative;
+    height: 232px;
+    width: 232px;
+    border-radius: 10px;
+    box-shadow: $secondaryBoxShadow;
+    border: $inputBorder;
+    background: $primaryWhite;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .pt-3{
+    width: 200px;
+    text-align: center;
+  }

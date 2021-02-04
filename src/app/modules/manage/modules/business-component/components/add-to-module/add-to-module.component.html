@@ -1,0 +1,68 @@
+<div class="add-wrapper">
+    <div class="add-header">
+        <h2 class="heading">Add Business Component to Hierarchy</h2>
+    </div>
+    <form>
+        <div class="d-flex mt-4">
+            <div class="form-group col-4 pl-0">
+                <div class="form-icon mb-2">
+                    <h6>Select Hierarchy*</h6>
+                    <div class="form-icon">
+                        <select class="form-control" name="selectHierarchy" [(ngModel)]="selectHierarchyRelationId"
+                            (change)="selectHierarchyData()">
+                            <option [value]="" class="d-none" selected>Select Hierarchy</option>
+                            <option *ngFor="let hierarchy of hierarchyData" [value]="hierarchy?.relationId">
+                                {{hierarchy?.hierarchyName}}</option>
+                        </select>
+                        <div class="form-arrow-icon px-2">
+                            <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="px-2">Select Modules*</h6>
+                <div class="form-group">
+                    <div *ngFor="let field of fieldArray , let i = index">
+                        <div class="d-flex">
+                            <div class="mb-3 form-icon px-2">
+                                <select #selectModule class="form-control" name="LeastModule" (change)="selected()">
+                                    <option [value]="undefined" disabled class="d-none" selected>Select Module
+                                    </option>
+                                    <ng-container *ngFor="let module of leastModules">
+                                        <option *ngIf="selectModule.value === module.id || !isSelected(module.id)"
+                                            value={{module.id}} [ngValue]="module.id">
+                                            {{module.name}}
+                                        </option>
+                                    </ng-container>
+                                </select>
+                                <!-- {{leastModules | json}} -->
+                                <div class="form-arrow-icon1">
+                                    <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                                </div>
+                            </div>
+                            <div class="cursor-pointer pl-2" *ngIf="i>0" (click)="deleteFieldValue(i, selectModule.value)">
+                                <img src="./assets/images/delete-blue.svg">
+                            </div>
+                            <div class="d-flex align-items-center form-group">
+                                <button class="btn common-add_btn align-self-center ml-3" type="button"
+                                    (click)="addFieldValue()">
+                                    <img src="./assets/images/add.svg" class="btn-case_add">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center button">
+            <div class="back marr-10 marl-10">
+                <button type="button" class="btn btn-dark btn-md " [routerLink]="['../list']">BACK</button>
+            </div>
+            <div class="add marr-10 marl-10">
+                <button type="button" class="btn btn-success btn-md" (click)="addBusCompToModule()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

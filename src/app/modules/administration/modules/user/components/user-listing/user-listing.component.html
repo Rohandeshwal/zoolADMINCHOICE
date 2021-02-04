@@ -1,0 +1,15 @@
+<div class="add-wrapper h-100">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">User List</h2>
+        <div>
+            <input type="text" class="form-control" placeholder="Search here">
+            <img class="search-pos" src="assets/images/search.svg">
+        </div>
+    </div>
+    <div class="w-100" style="height: calc(100% - 200px)">
+        <ag-grid-angular style="width: 100%; height: 100%;" class="ag-theme-alpine" [rowData]="rowData" pagination=true
+            [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" rowSelection='multiple'>
+            <!-- [icons]="icons" -->
+        </ag-grid-angular>
+    </div>
+</div>

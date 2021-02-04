@@ -1,0 +1,73 @@
+<div class="add-wrapper">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">Create New Licence</h2>
+    </div>
+    <form>
+        <div class="form-group d-flex justify-content-between">
+            <div class="col-6">
+                <input class="parameter-subtitle parameter-subtitle--color w-100" placeholder="Enter Licence Name">
+            </div>
+            <div class="col-6">
+                <input class="parameter-subtitle parameter-subtitle--color w-100" placeholder="Enter No of users">
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <div class="col-4 align-self-end">
+                <select id="inputState" class="form-control w-100 select-style">
+                    <option selected>Select period in month</option>
+                </select>
+                <div class="form-arrow-icon">
+                    <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                </div>
+            </div>
+            <div class="col-4">
+                <input class="parameter-subtitle parameter-subtitle--color w-100" placeholder="Minimum renewal users">
+            </div>
+            <div class="col-4">
+                <input class="parameter-subtitle parameter-subtitle--color w-100"
+                    placeholder="Price per user per month">
+            </div>
+        </div>
+    </form>
+    <app-licence-table></app-licence-table>
+    <div class="col-5 mx-auto my-4">
+        <div class="d-flex">
+            <div class="line-hr mx-auto">
+            </div>
+            <div class="text px-4 mx-auto">OR</div>
+            <div class="line-hr mx-auto"></div>
+        </div>
+    </div>
+    <div class="col-6 mx-auto">
+        <div class="context">
+            <div class="container">
+                <div class="file-upload-icon text-center">
+                    <img src="./assets/images/cloud-computing.png" alt="" class="cloud-class">
+                </div>
+                <div class="upload-text text-center">
+                    <p>upload New Licence</p>
+                </div>
+                <div class="drag-text text-center">
+                    <h5>Drag & Drop CSV file here to upload</h5>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="template-download justify-content-center d-flex my-3">
+            <div class="download-icon d-flex ">
+                <img src="./assets/images/download.png" class="download-img mr-2" width="12" height="12" />
+                <!--<i class="fa fa-download" aria-hidden="true"></i>--->
+                <div class="download-template d-flex my-2"> Download Template</div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-5 mx-auto d-flex justify-content-center my-3">
+        <div class="d-flex ">
+            <button type="button" class="btn btn-shape btn-add mr-2" routerLink="/administration/licence">CREATE</button>
+            <button type="button" class="btn btn-white btn-shape ml-2">CANCEL</button>
+        </div>
+    </div>
+</div>

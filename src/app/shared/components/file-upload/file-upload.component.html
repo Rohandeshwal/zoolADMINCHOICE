@@ -1,0 +1,40 @@
+<div class=" row d-flex col-12 upload-csv ">
+    <div class="d-flex flex-column mx-auto col-2">
+        <div class="line1 mx-auto">
+        </div>
+        <div class="text mx-auto">OR</div>
+        <div class="line1 mx-auto"></div>
+    </div>
+    <div class="col-10">
+        <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+            (onFileLeave)="fileLeave($event)">
+            <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                <div class="context">
+                    <div class="container">
+                        <div class="file-upload-icon text-center">
+                            <img src="./assets/images/cloud-computing.png" alt="" class="cloud-class">
+                        </div>
+                        <div class="upload-text text-center">
+                            <p>Upload Top Level Objects</p>
+                        </div>
+                        <div class="drag-text text-center">
+                            <h5>Upload Excel File</h5>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngx-file-drop>
+
+        <div class="template-download  justify-content-center d-flex ">
+            <div class="download-icon d-flex  ">
+                <img src="./assets/images/download.png" width="12" height="12" />
+                <!--<i class="fa fa-download" aria-hidden="true"></i>--->
+            </div>
+            <div class="download-template d-flex"> Download Template</div>
+        </div>
+    </div>
+</div>
+<div *ngFor="let item of files; let i=index">
+    <span><strong>{{ item.relativePath }}</strong></span>
+</div>
+

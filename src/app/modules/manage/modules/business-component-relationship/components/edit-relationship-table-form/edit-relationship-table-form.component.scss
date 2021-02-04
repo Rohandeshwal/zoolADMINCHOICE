@@ -1,0 +1,77 @@
+@import "../../../../../../../assets/styles//common.scss";
+
+.obj-name {
+  padding: 11px 15px;
+}
+
+.upload-data {
+  padding: 0px 15px;
+}
+
+.form-arrow-icon {
+  position: absolute;
+  right: 12px;
+  top: 0px;
+  background: #ffffff;
+  height: 36px;
+  width: 24px;
+  display: flex;
+  pointer-events: none;
+}
+
+.form-arrow-icon1 {
+  top: 29px;
+  width: 24px;
+  right: 15px;
+  background: #ffffff;
+  height: 36px;
+  position: absolute;
+  display: flex;
+  pointer-events: none;
+}
+
+.dual-list-groupa,
+.dual-list-groupb {
+  width: 48%;
+}
+
+.dual-list-groupa {
+  float: left;
+}
+
+.dual-list-groupb {
+  float: right;
+}
+
+.e-listbox-wrapper .e-list-item.e-selected {
+  background-color: #ff860d;
+  color: white !important;
+}
+
+.e-listbox-wrapper .e-list-parent {
+  margin: 0;
+  padding: 3px !important;
+}
+
+.e-listboxtool-wrapper.e-right .e-listbox-tool {
+  /* margin-left: 15px; */
+  margin: auto;
+  margin-left: 12px;
+}
+
+.ng-select.custom {
+  border: 0px;
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.ng-select.custom .ng-select-container {
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.readonly-field {
+  background: #d8d6d6dd;
+  padding: 13px;
+  width: 82%;
+}

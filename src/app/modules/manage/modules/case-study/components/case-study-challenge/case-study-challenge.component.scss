@@ -1,0 +1,64 @@
+@import'../../../../../../../assets/styles/common.scss';
+
+.accordion-container {
+    display: flex;
+}
+
+.dropdown-container {
+    width: 100%;
+    box-shadow: $primaryColor3 0px 2px 3px;
+    padding: 7px 0px;
+    margin-top: 0px;
+
+    .dropdown-select {
+        font-size: $tertiaryFontSize;
+    }
+}
+.accordion-container{
+    width: 170%;
+}
+
+.head{
+    font-weight: 600;
+}
+//filedset
+
+fieldset {
+    border: 1px solid $primaryMidnightBlue2;
+
+    legend {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        padding: 5px 20px;
+        margin-bottom: 0.5rem;
+        font-size: $tertiaryFontSize;
+        line-height: inherit;
+        white-space: normal;
+        margin: 0 auto;
+        background: #a8d9f8;
+        color: $primaryWhite;
+    }
+}
+.common-remove_btn{
+    width: 25px;
+    height: 41px;
+}
+@media  screen and (max-width:1280px) and (min-width:800px){
+    .form-control{
+        font-size:12px;
+    }
+    .dropdown-container .dropdown-select {
+        font-size: 11.5px;
+    }
+   .bnt-laptopsize{
+    position: relative;
+    right: 10px;
+   }
+}
+@media  screen and (max-width:1366px) and (min-width:1024px){
+    .bnt-laptopsize{
+        position: relative;
+        right: 10px;
+       }
+}

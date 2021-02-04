@@ -1,0 +1,64 @@
+@import'../../../../../../../assets/styles/common.scss';
+.parameter-subtitle{
+    font-size: $tertiaryFontSize;
+    font-weight: 500;
+    text-align: center;
+    color:$primaryGrey2 !important;
+    opacity: 0.7;
+    padding: 9px 0px;
+    box-shadow: #629CC81A 0px 3px 6px !important;
+}
+.form-arrow-icon{
+    right: 20px;
+    top: 5px;
+    height: 23px;
+    width: 20px;
+}
+
+.line-hr{
+    border-bottom:1px solid $primaryMidnightBlue;
+    height: 1px;
+    width:100%;
+    margin:auto;
+    opacity: 0.27;
+}
+.context{
+    border: 2px dashed rgba(185, 161, 161, 0.34);
+    border-radius: 26px;
+}
+.file-upload-icon{
+    padding: 28px 0;
+}
+.cloud-class{
+    height: 10vh;
+}
+.download-icon{
+    padding-right: 12px;
+    padding-top: 6px;
+}
+.template-download{
+    width: 100%;
+    padding:2px;
+}
+.drag-text{
+    color: $primaryMidnightBlue;
+    font-size: $secondaryFontSize !important;
+}
+.upload-text{
+    color: $secondaryBlue;
+    font-size: $tertiaryFontSize;
+}
+.download-template{
+    color: $primaryMidnightBlue;
+   font-size: $secondaryFontSize;
+}
+.btn-shape{
+   width:150px;
+   height:48px;
+   border-radius:0px 10px 0px 10px; 
+}
+.download-img{
+    width:12px;
+    height:12px;
+    align-self:center;
+}

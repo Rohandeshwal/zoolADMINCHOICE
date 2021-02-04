@@ -1,0 +1,20 @@
+<div class="delete-modal">
+  <!-- <h4 class="delete-title">Warning </h4> -->
+  <button type="button" class="close mt-1 mr-1" aria-label="Close" (click)="onSelect('close')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="delete-body">
+  <p class="delete-title">This module is a top level module of a Hierarchy. </p>
+  <p class="delete-title">Do you want to add this module? </p>
+
+  <div class="d-flex justify-content-left button">
+    <div class="back marr-10 marl-10">
+
+      <button type="button" (click)="dismissModal(false)" class="btn btn-dark btn-md ">CANCEL</button>
+    </div>
+    <div class="add marr-10 marl-10">
+      <button type="button" class="btn btn-success btn-md " (click)="dismissModal(true)">PROCEED </button>
+    </div>
+  </div>
+</div>

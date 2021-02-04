@@ -1,0 +1,53 @@
+<div class="form-wrapper mt-3">
+    <form class="form">
+        <div class="form-group col-6 pl-0">
+            <h5 class="head">Case Study Name*</h5>
+            <input type="text" class="form-control" placeholder="Case Study Name">
+        </div>
+        <div class="d-flex">
+            <div class="form-group col-6 pl-0">
+                <h5 class="head">Case Study Group*</h5>
+                <input type="text" class="form-control" placeholder="Case Study Name">
+            </div>
+            <div class="col-5 form-icon">
+                <h5 class="head">Learning Journey*</h5>
+                <div class="form-icon">
+                    <select class="form-control">
+                        <option class="d-none" disabled>Select Journey</option>
+                        <option>Knowing</option>
+                        <option>Doing</option>
+                        <option>Creating</option>
+                    </select>
+                    <div class="form-arrow-icon">
+                        <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group ">
+            <h5 class="head">Background Information*</h5>
+          <quill-editor   > </quill-editor>
+        </div>
+        <div class="form-group ">
+            <h5 class="head">Detailed Case Information*</h5>
+            <quill-editor  > </quill-editor>
+        </div>
+        <app-upload></app-upload>
+        
+        <app-case-study-challenge></app-case-study-challenge>
+
+        <!-- <div class="d-flex justify-content-center button">
+            <div class="back marr-10 marl-10">
+                <button type="button" class="back-btn" [routerLink]="['/manage-list']">CANCEL</button>
+            </div>
+            <div class="add marr-10 marl-10">
+                <button type="button" class="add-btn" [routerLink]="['/manage-list']">NEXT</button>
+            </div>
+        </div> -->
+        <div class="form-group ">
+            <h5 class="head">Learning*</h5>
+            <quill-editor> </quill-editor>
+        </div>
+
+    </form>
+</div>

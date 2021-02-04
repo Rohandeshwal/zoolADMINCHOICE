@@ -1,0 +1,92 @@
+@import '../../../../../../../assets/styles/common.scss';
+
+.dropdown-container {
+    width: 100%;
+    box-shadow: $primaryColor3 0px 2px 3px;
+    padding: 7px 0px;
+    margin-top: 0px;
+
+    .dropdown-select {
+        font-size: $tertiaryFontSize;
+    }
+}
+.control--checkbox{
+    margin-bottom: 1rem !important;
+}
+
+.custome-check-box .control input:checked~.control__indicator {
+    background: $primaryOrange;
+    border: 1px solid $primaryOrange;
+}
+.question-container{
+    background: #e2e3e5f5;
+    transition: 0.2s all;
+    border: 1px solid #c5bebe;
+
+}
+.questionaccordion{
+    .accordion{
+        ::ng-deep .card-body{
+            padding-top: 5px;
+        }
+    }
+}
+
+.ans-box{
+    background: $primaryWhite;
+    border-radius: 5px;
+}
+.form-arrow-icon{
+  top:1px;
+    right: 1px;
+    width: 16px; }
+    .form-icon{    padding-bottom: 7px;}
+
+
+    .head{
+        font-weight: 600;
+    }
+    .accordion-container1{
+        width: 170%;
+    }
+.form-control{
+    border:1px solid #ced4da;
+}
+.btn-yes{
+    background:white;
+    border:1px solid #ced4da;
+    height: 48px;
+    color: #776767;
+    border-radius: 0px 10px;
+    width: 140px;
+    box-shadow: 0px 2px 3px #0000001A !important;
+ 
+    &:hover{
+        background:#FF860D;
+    }
+    &:visited{
+        background:#FF860D;
+    }
+    &:focus{
+        background-color:#FF860D ;
+        color: white;
+    }
+}
+.btn-no{
+    background:white;
+    border:1px solid #ced4da;
+    border-radius: 0px 10px;
+    height: 48px;
+    color: #776767;
+    width: 140px;
+    box-shadow: 0px 2px 3px #0000001A !important;
+
+    &:hover{
+        background:#FF860D;
+        color: white;
+    }
+    &:focus{
+        background-color:#FF860D ;
+    }
+
+}

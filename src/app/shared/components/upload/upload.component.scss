@@ -1,0 +1,77 @@
+
+@import'../../../../assets/styles/common.scss';
+.form-arrow-icon{
+    right: 0px;
+    height: 100%;
+}
+.url{
+    // margin: 10px 0px;
+    position: relative;
+}
+.user-input-update{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+.icon-position{
+    // top:12px;
+}
+.upload-btn-wrapper{
+    top: 12px;
+}
+.videos-url{
+    top: 12px;
+}
+.optional-info{
+    border: none;
+    /* background: #FF860D; */
+    color:black;
+    /* padding: 9px; */
+    font-weight: 600;
+    font-size: 16px;
+    /* box-shadow: 0px 2px 3px #0000001A !important; */
+    /* border-radius: 8px; */
+    text-decoration: underline;}
+.optional-data{
+    padding-top: 3vh;
+}
+.uploaded {
+    justify-content: space-between;
+}
+
+
+.tooltip{
+    .show{}
+    .arrow{
+      ::before{
+        border-bottom: #969292 !important; 
+      }
+      
+    .tooltip-inner{
+      padding: 3px !important;
+        width: 202px !important;
+        background: #969292 !important;
+        font-size: 12px !important;
+    }
+    }
+    }
+    .video-url{
+        
+        top: 10px;
+        left: 7px;
+       
+    }
+    .eroors{
+        color: red;
+        font-size: 12px;
+    }
+   
+    .docs{
+        .form-group{
+        margin-bottom: 0px !important;
+        }
+    }
+    .info{
+        line-height: 36px;
+        font-size: 14px;
+    }

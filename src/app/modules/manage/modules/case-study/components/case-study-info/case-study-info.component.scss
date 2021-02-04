@@ -1,0 +1,41 @@
+@import'../../../../../../../assets/styles/common.scss';
+.upload-icon{
+    height: 14px;
+    width:18px ;
+}
+
+.user-input-update{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+
+// .form-arrow-icon{
+  
+//     right: 1px;
+   
+    
+//     width: 19px; }
+
+
+//     .head{
+//         font-weight: 600;
+    
+//     }
+  
+//     .docs{
+//         .form-group{
+//         margin-bottom: 0px !important;
+//         }
+//     }
+//     .info{
+//         line-height: 36px;
+//         font-size: 14px;
+//     }
+   
+//     .video-url{
+        
+//         top: 10px;
+//         left: 7px;
+       
+//     }

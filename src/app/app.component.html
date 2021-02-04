@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <app-header></app-header>
+        
+    </div>
+    <div class="d-flex login">
+        <div class="col-lg-2 col-sm-3  px-0 side">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-lg-10 col-sm-9 scroll-body px-0">
+        <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+<ng-http-loader  [backgroundColor]="'#FF860D'" [debounceDelay]="100"></ng-http-loader>

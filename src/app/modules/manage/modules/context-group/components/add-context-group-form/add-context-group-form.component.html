@@ -1,0 +1,38 @@
+<div class="add-wrapper">
+  <div class="add-header d-flex justify-content-between">
+    <h2 class="heading align-self-center">{{groupId?'Edit':'Add'}} Context Group</h2>
+    <div class="back marr-10 marl-10">
+      <button type="button" class="btn btn-dark btn-md " [routerLink]="['/manage/context-group/list']">
+        BACK
+      </button>
+    </div>
+  </div>
+  <div class="add-form row">
+    <div class="upload col-7">
+      <div class="form-wrapper">
+        <form class="form" #addContextGroupForm="ngForm">
+          <div class="form-group">
+            <h6>Context Group Name*</h6>
+            <input type="text" class="form-control" name="contextGroupName" placeholder="Context Group Name" required
+              [(ngModel)]="contextGroup.name" #contextGroupName="ngModel" [ngClass]="{
+                'is-invalid': addContextGroupForm.submitted && contextGroupName.invalid
+              }" />
+            <div *ngIf="addContextGroupForm.submitted && contextGroupName.invalid" class="invalid-feedback">
+              <div *ngIf="contextGroupName.errors.required">
+                Context group name is required
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-start button">
+            <div class="add">
+              <button type="submit" class="btn btn-success btn-md" (click)="createContextGroup(addContextGroupForm)">
+                SAVE
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

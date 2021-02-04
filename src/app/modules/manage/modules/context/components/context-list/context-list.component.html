@@ -1,0 +1,22 @@
+<div class="add-wrapper mb-2">
+  <div class="add-header d-flex justify-content-between">
+    <h2 class="heading align-self-center">Project Workspace Contexts</h2>
+    <button class="btn btn-primary btn-sm " [routerLink]="['../add']">
+      <span class="mx-2 plus-icon">+</span>ADD CONTEXT
+    </button>
+  </div>
+  <div class="d-flex justify-content-end align-items-right mt-2">
+    <div class="filter d-flex align-items-center mx-2">
+      <input type="search" id="Search" name="contextName" class="form-control" placeholder="Search here"
+        [(ngModel)]="searchText" (keyup.enter)="setDataForSearchContext()" />
+      <img src="assets/images/search.svg" (click)="setDataForSearchContext()" />
+    </div>
+    <button class="btn btn-secondary btn-md " (click)="resetSearch()">Clear</button>
+  </div>
+  <div class="w-100 py-3" style="height: calc(100% - 200px)">
+    <ag-grid-angular style=" height: 362px" #contextList class="ag-theme-alpine" [gridOptions]="gridOptions"
+      [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" rowSelection="multiple"
+      (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+</div>

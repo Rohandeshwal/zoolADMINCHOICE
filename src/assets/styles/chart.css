@@ -1,0 +1,129 @@
+p {
+    font-family: Lato;
+  }
+   
+    #full-container {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+
+  #opts{
+    display: none;
+    position: absolute;
+  }
+
+  .chart-dropdown{
+    font-size: 14px !important;
+    fill: #fff !important;
+  }
+  /* ########################   DEPARTMENT INFO  ############################*/
+  .department-information {
+    font-family: 'Roboto', sans-serif;
+  display:none;
+    box-shadow: 0 0 5px #999999;
+    position: absolute;
+    max-width: 200px;
+    top: 60px;
+    left: 20px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .department-information .dept-name {
+    color: #26a69a;
+    font-weight: bold;
+  }
+  
+  .department-information .dept-description {
+    margin-top: 10px;
+    color: #959b9a;
+    font-size: 13px;
+  }
+  
+  .department-information .dept-emp-count {
+    margin-top: 10px;
+    color: #959b9a;
+    font-size: 13px;
+  }
+  
+  /* ############################################## SVG ################################# */
+  
+  .nodeHasChildren {
+    fill: white;
+  }
+  
+  .nodeDoesNotHaveChildren {
+    fill: white;
+  }
+  
+  .nodeRepresentsCurrentUser {
+    stroke: Chartreuse;
+    stroke-width: 3;
+  }
+  
+  text {
+    fill: dimgray;
+  }
+  
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+  
+  .node {
+    cursor: pointer;
+  }
+  
+  .node-collapse {
+    stroke: grey;
+  }
+  
+  .node-collapse-right-rect {
+    fill: #70c645;
+    stroke: #70c645;
+  }
+  
+  .node text {
+    fill: white;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 10px;
+  }
+  
+  .node circle {
+    stroke-width: 1px;
+    stroke: #70c645;
+    fill: #70c645;
+  }
+  
+  .node-group .emp-name {
+    fill:#034D7B;
+    font-size: 12px;
+    font-weight: 600
+  }
+  
+  .node-group .emp-position-name {
+    fill: #59525b;
+    font-size: 11px;
+  }
+  
+  .node-group .emp-area {
+    fill: #91a4a5;
+    font-size: 10px;
+  }
+  
+  .node-group .emp-count,
+  .node-group .emp-count-icon {
+    fill: #91a4a5;
+    font-size: 12px;
+  }
+
+
+  
+  .object-icon{
+    height: 40px;
+    width: 40px;
+     }

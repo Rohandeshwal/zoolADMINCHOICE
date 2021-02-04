@@ -1,0 +1,40 @@
+<div class="add-wrapper">
+    <div class="add-header d-flex justify-content-between">
+        <h2 class="heading align-self-center">Add Business Relation Group</h2>
+        <div class="back marr-10 marl-10">
+            <button type="button" class="btn btn-dark btn-md " (click)="onBack()">
+                BACK
+            </button>
+        </div>
+    </div>
+    <div class="add-form row">
+        <div class="upload col-7">
+            <div class="form-wrapper">
+                <form class="form" #relationForm="ngForm">
+                    <div class="form-group">
+                        <h6>Name*</h6>
+                        <input type="text" class="form-control" placeholder="Business Relation Group Name"
+                            name="relationForm" #Relation_Name="ngModel" [(ngModel)]="relationName"
+                            [ngClass]="{ 'is-invalid': relationForm.submitted && Relation_Name.invalid }" required />
+
+                        <div *ngIf="Relation_Name.invalid" class="invalid-feedback">
+                            <div *ngIf="Relation_Name.errors.required">Business Relation Group Name is required</div>
+                        </div>
+
+
+                    </div>
+                    <h6>Description*</h6>
+                    <textarea class="form-control" cols="3" rows="2" name="module_descriptions"
+                        placeholder="Enter  Description "></textarea>
+                </form>
+                <div class="d-flex justify-content-start button">
+                    <div class="add">
+                        <button type="submit" (click)="onSubmit(relationForm)" class="btn btn-success btn-md">
+                            SAVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

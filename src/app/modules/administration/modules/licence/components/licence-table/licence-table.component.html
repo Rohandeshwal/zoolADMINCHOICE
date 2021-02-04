@@ -1,0 +1,55 @@
+<!-- <div class="table-container mt-2 listing-container col-md-12 col-lg-10">
+  <table class="table table-borderless table-responsive-lg mb-0">
+    <thead class="listing-header">
+      <th class="listing-header_text"></th>
+      <th class="listing-header_text">View</th>
+      <th class="listing-header_text">Create</th>
+      <th class="listing-header_text">Edit</th>
+      <th class="listing-header_text">Delete</th>
+    </thead>
+    <tbody class="scroll-content">
+      <tr class="listing-data text-center  mx-auto" *ngFor="let detail of licenceList">
+        <th class="list-title">{{detail.name}}</th>
+        <td class="listing-data_info">
+          <div class="custome-check-box">
+            <label class="control control--checkbox">
+              <input type="checkbox" name="" />
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </td>
+        <td class="listing-data_info">
+          <div class="custome-check-box">
+            <label class="control control--checkbox">
+              <input type="checkbox" name="" />
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </td>
+        <td class="listing-data_info">
+          <div class="custome-check-box">
+            <label class="control control--checkbox">
+              <input type="checkbox" name="" />
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </td>
+        <td class="listing-data_info">
+          <div class="custome-check-box">
+            <label class="control control--checkbox">
+              <input type="checkbox" name="" />
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<div class="w-100 h-100">
+  <ag-grid-angular style="width: 100%; height: 100%;" class="ag-theme-alpine" [rowData]="rowData"
+      [columnDefs]="columnDefs"  [frameworkComponents]="frameworkComponents"
+      rowSelection='multiple'>
+      <!-- [icons]="icons" -->
+  </ag-grid-angular>
+</div>

@@ -1,0 +1,36 @@
+<div class="modal-header justify-content-center">
+    <h3 class="page-heading">Select an Modules</h3>
+    <button type="button" class="close" aria-label="Close" (click)="onSelect('close')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="filter d-flex align-items-center mx-2">
+        <input type="text" id="Search" class="form-control" name="businessCompName" [(ngModel)]="moduleName"
+            placeholder="Search" (keyup.enter)="searchModule()">
+        <img src="assets/images/search.svg" (click)="searchModule()">
+    </div>
+    <button class="btn  clear-btn" (click)="clearSearch()">Clear</button>
+</div>
+
+<div class="modal-body p-4 m-4 submodule-container">
+    <div class="row m-0">
+        <label *ngFor="let subModule of subModules, let i = index" class="card-checkbox mx-3 mb-4"
+            (click)="selectParentModule(subModule)">
+            <div class="card-content">
+                <div class="card-layout d-flex justify-content-center align-items-center">
+                    <img class="card-icon" [src]="getImage(subModule?.imgLink)">
+                    <span class="info-icon">
+                        <img src="./assets/images/play.svg">
+                        <img src="./assets/images/attachment.svg">
+                        <img (click)="onClickDesc(subModule)" src="./assets/images/info-icon.svg">
+                    </span>
+                </div>
+                <div class="card-name mt-3">{{subModule?.name}}</div>
+            </div>
+        </label>
+    </div>
+</div>
+<div class="text-center mb-3">
+    <button type="button" (click)="subModuleSelected()" class="btn btn-success btn-md ">CONTINUE</button>
+</div>

@@ -1,0 +1,189 @@
+<div class="add-wrapper">
+        <div class="add-header">
+            <h2 class="heading align-self-center">Quiz/Question</h2>
+        </div>  
+        <form>
+        <div class="col-7 pl-0 mt-4">
+            <div class="form-group col-6 pl-0">
+                <h5 class="head">Quiz Name*</h5>
+                <input type="text" class="form-control" placeholder="Quiz Name">
+            </div>
+            <div class="d-flex">
+                <div class="form-group col-6 pl-0">
+                    <h5 class="head">Quiz Group*</h5>
+                    <input type="text" class="form-control" placeholder="Quiz Name">
+                </div>
+                <div class="col-5 form-icon">
+                    <h5 class="head">Learning Journey*</h5>
+                    <div class="form-icon">
+                        <select class="form-control">
+                            <option class="d-none" disabled>Select Quiz Type</option>
+                            <option> Knowing</option>
+                            <option>Doing</option>
+                            <option>Creating</option>
+                        </select>
+                        <div class="form-arrow-icon">
+                            <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                        </div>
+                    </div>
+                </div>
+        </div>
+            <div class="my-2 accordion-container1 questionaccordion">
+            <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="{{activePanel}}">
+                <ngb-panel [id]="Indexbusiness" *ngFor="let object of businessComponent;let Indexbusiness = index;"
+                    class="question-container p-2 pb-4" (click)="closeOthers(Indexbusiness)">
+                    <ng-template ngbPanelTitle>
+                        <div class="d-flex w-100 justify-content-between">
+                            <div class="arrow-left">
+                                <img src="./assets/images/next.svg" class="arrow">
+                                <span class="head">{{object?.title}}</span>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div *ngIf="Indexbusiness > 0">
+                                    <button type="button" class="btn btn-remove_acco"
+                                        (click)="removeBusinessquiz(Indexbusiness)">
+                                        <img src="./assets/images/delete.svg">
+                                                
+                                    </button>
+                                </div>
+                                <div *ngIf="businessComponent.length-1==Indexbusiness">
+                                    <button class="btn btn-add_acco" type="button"
+                                        (click)="addBusinessquiz(Indexbusiness+1)">
+
+                                        <!-- <img src="./assets/images/add.svg" class="btn-case_add"> -->
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                      
+                            <div class="col-12 form-group">
+                                <quill-editor   > </quill-editor>
+                                
+                            </div>
+                            <div class="col-6 form-icon">
+                                <h6 class="head">Answer type</h6>
+                                <div class="form-icon">
+                                    <select class="form-control " [(ngModel)]="selectedAnsType" name="ansType" >
+                                        <option value="{{type.value}}" *ngFor="let type of ansType">{{type.value}}</option>
+                                    
+                                    </select>
+                                    <div class="form-arrow-icon">
+                                        <img src="./assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="ans-box p-3" *ngIf="selectedAnsType === 'Multiple Choice'">
+                                  <div class="d-flex mb-3" *ngFor="let item of ansList , let i = index;">
+                                        <div class="d-flex align-items-center col-6">
+                                            <input type="checkbox" value="{{item.value}}" name="{{item.value}}"> &nbsp; &nbsp;
+                                            <textarea  class="form-control"  placeholder="Enter Answer" 
+                                ></textarea>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div *ngIf="i > 0">
+                                                <button type="button" class="btn common-remove_btn" (click)="removeAns(i)"><img
+                                                        src="./assets/images/delete.svg" class="btn-case_add"></button>
+                                            </div>
+                                            <div *ngIf="ansList.length-1==i">
+                                                <button class="btn common-add_btn" type="button" (click)="addAns()">
+                                                    <img src="./assets/images/add.svg" class="btn-case_add">                                                  
+                                                </button>
+                                            </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="ans-box p-3" *ngIf="selectedAnsType === 'Single Choice'">
+                                    <div class="d-flex mb-3" *ngFor="let item of ansList , let i = index;">
+                                          <div class="d-flex align-items-center col-6 ">
+                                              <input type="radio" value="{{item.value}}" name="context">
+                                              <input type="text" class="form-control mx-3" placeholder="Enter Answer">
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                              <div *ngIf="i > 0">
+                                                  <button type="button" class="btn common-remove_btn" (click)="removeAns(i)"><img
+                                                          src="./assets/images/delete.svg" class="btn-case_add"></button>
+                                              </div>
+                                              <div *ngIf="ansList.length-1==i">
+                                                  <button class="btn common-add_btn" type="button" (click)="addAns()">
+                                                      <img src="./assets/images/add.svg" class="btn-case_add">
+                                                  </button>
+                                              </div>
+                                          </div>
+                                    </div>
+                                  </div>
+
+                                <div class=" d-flex ans-box p-3" *ngIf="selectedAnsType === 'Yes or No'">
+                                    <div>
+                                        <button class="btn btn-yes mr-4 ml-4-" >Yes</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-no ml-4">No</button>
+                                    </div>
+                                </div>
+                                <div class="ans-box p-3" *ngIf="selectedAnsType === 'Match the Column'">
+                                  <div class="d-flex justify-content-around" *ngFor="let items of matchColumns, let objIndex = index;">
+                                    <div class="col-4">
+                                        <div class="form-group  pl-0">
+                                            <input type="text" class="form-control" placeholder="Question ">
+                                        </div>
+                                    </div> 
+                                    <div class="col-4">
+                                        <div class="form-group  pl-0">
+                                            <input type="text" class="form-control" placeholder="Answer ">
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-2">
+                                        <button class="btn common-add_btn" type="button" (click)="addContext()" *ngIf="matchColumns.length-1==objIndex">
+                                            <img src="./assets/images/add.svg" class="btn-case_add">
+                                        </button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex mb-3">
+                                <div class="col-12 px-0">
+                                    <div class="d-flex align-items-center w-100">
+                                        <div class="custome-check-box col-1">
+                                            <label class="control control--checkbox">
+                                                <input type="checkbox" name="" />
+                                                <div class="control__indicator"></div>
+                                            </label>
+                                        </div>
+                                        <div class="col-2 pl-0">
+                                            <label class=" case-title">Object
+                                                1</label>
+                                        </div>
+
+                                        <div class="col-9">
+                                            <input list="businessComponent" class="form-control"
+                                                placeholder="Business Components">
+                                            <datalist id="businessComponent">
+                                                <option>Business Component 1</option>
+                                                <option>Business Component 2</option>
+                                                <option>Business Component 3</option>
+                                            </datalist>
+                                            <div class="form-arrow-icon">
+                                                <img src="../../../../../assets/images/arrow-right1.svg"
+                                                    class="arrow-down" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                       
+                    </ng-template>
+                </ngb-panel>
+                </ngb-accordion>
+            </div>
+            <div class="col-12 d-flex justify-content-center mt-5 px-0 button ">
+                <button type="button" class="btn back-btn mx-3" routerLink="../list" >Back</button>
+                <button type="button" class="btn btn-next mx-2" routerLink="../list"  (click)= "onSubmit()" >Save</button>
+            </div>
+        </div>
+    </form>
+</div>

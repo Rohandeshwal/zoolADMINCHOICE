@@ -1,0 +1,219 @@
+@import "../../../../assets/styles/variable.scss";
+
+.sidebar-wrapper {
+  // width:240px;
+  width: 100%;
+  background-color: $primaryColor;
+  height: calc(100vh - 50px);
+
+  .home {
+    font-size: $tertiaryFontSize;
+    margin-bottom: 12px;
+    color: $primaryColor2;
+  }
+
+  .sidebar-fluid {
+    padding: 0px 10px;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .content {
+    padding: 0;
+    // width: 200px;
+    width: 100%;
+  }
+
+  .side-icon {
+    //    margin-right: 16px;
+    width: 100%;
+  }
+
+  .link-text {
+    padding-left: 20px;
+  }
+
+  .img-icons {
+    display: flex;
+    width: 100%;
+    outline: none;
+
+    i {
+      margin-right: 10px;
+      margin-top: 4px;
+      font-size: $tertiaryFontSize;
+    }
+  }
+}
+
+.sidebar-accordion {
+  .accordion {
+    width: 100%;
+
+    ::ng-deep .card {
+      width: 100%;
+      border: none;
+      background: none;
+    }
+
+    ::ng-deep .card-header {
+      // width: 208px !important;
+      width: 100%;
+      padding: 7px 0px;
+      transition: 200ms all ease-in-out;
+      background: $primaryColor !important;
+      border-radius: 30px !important;
+    }
+
+    ::ng-deep .card-body {
+      background: $primaryColor;
+      padding: 0;
+    }
+
+    ::ng-deep .card-header:hover {
+      background: $primaryYellow !important;
+      width: 100%;
+
+      .img-icons {
+        color: $primaryBlack;
+      }
+
+      .arrow {
+        color: $primaryBlack;
+      }
+    }
+
+    .objects {
+      // cursor: pointer;
+      margin-top: 12px;
+    }
+
+    .objects:hover {
+      color: $primaryYellow;
+    }
+
+    .users {
+      cursor: pointer;
+    }
+
+    .users:hover {
+      color: $primaryYellow;
+    }
+
+    .licenses {
+      cursor: pointer;
+    }
+
+    .licenses:hover {
+      color: $primaryYellow;
+    }
+
+    .business-components {
+      cursor: pointer;
+    }
+
+    .business-components:hover {
+      color: $primaryYellow;
+    }
+
+    .association {
+      cursor: pointer;
+    }
+
+    .association:hover {
+      color: $primaryYellow;
+    }
+
+    a {
+      color: white;
+      font-weight: 600;
+      font-size: $tertiaryFontSize;
+      text-decoration: none;
+      margin: 15px 0px !important;
+      display: block;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: $primaryYellow;
+    }
+
+    .ab {
+      padding-left: 12px;
+    }
+
+    .svg-img {
+      padding-right: 16px;
+    }
+
+    .arrow {
+      transition: all 500ms ease-in-out;
+    }
+
+    ::ng-deep .card-header:hover .arrow {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.active-link {
+  color: $primaryYellow !important;
+}
+
+.login {
+  padding: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  font-size: $tertiaryFontSize;
+  font-weight: 600;
+}
+
+.login:hover {
+  width: 100%;
+  padding: 7px 0px;
+  background-color: #f8d648;
+  border-radius: 30px;
+  color: $primaryBlack !important;
+
+  .login-icon {
+    color: $primaryBlack !important;
+  }
+
+  .login-text {
+    color: $primaryBlack !important;
+  }
+}
+
+.login-icon {
+  padding: 10px;
+  color: $primaryWhite !important;
+
+  &:hover {
+    color: $primaryBlack !important;
+    text-decoration: none;
+  }
+}
+
+.login-text {
+  padding: 12px;
+  color: $primaryWhite;
+
+  &:hover {
+    color: $primaryBlack !important;
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logout-icon {
+  transform: scale(-1, 1);
+  color: $primaryWhite;
+
+  &:hover {
+    color: $primaryBlack;
+  }
+}

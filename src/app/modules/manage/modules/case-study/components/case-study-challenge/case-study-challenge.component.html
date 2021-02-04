@@ -1,0 +1,185 @@
+<h5 class="head">The Challenge</h5>
+<!-- <fieldset> -->
+<!-- <legend>Business available score is 70%</legend> -->
+<!-- <div class="alert alert-primary"><i class="fa fa-exclamation-triangle pr-2"></i>Score-Ratio: Business component
+    correction is 70% and Priority is 30%</div> -->
+<div class="my-2 accordion-container questionaccordion">
+    <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="{{activePanel}}">
+        <ngb-panel [id]="questionIndex" *ngFor="let eachQuestion of questionlist; let questionIndex = index;"
+            (click)="closeOthers(questionIndex)">
+            <ng-template ngbPanelTitle>
+                <div class="d-flex w-100 justify-content-between">
+                    <div class="arrow-left">
+                        <img src="./assets/images/next.svg" class="arrow">
+                        <span class="head">{{eachQuestion?.title}}</span>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div *ngIf="questionIndex > 0">
+                            <button type="button" class="btn btn-remove_acco" (click)="removeAccordion(questionIndex)">
+                                <img src="./assets/images/delete.svg">
+                            </button>
+                        </div>
+                        <div *ngIf="questionlist.length-1== questionIndex && questionIndex < 4">
+                            <button class="btn btn-add_acco" type="button" (click)="addAccordion(questionIndex+1)">
+                                <!-- <img src="./assets/images/add.svg" class="btn-case_add"> -->
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <form>
+                    <div class="col-12 px-0 form-group">
+                        <textarea class="form-control"  placeholder="Question" 
+                        ></textarea>
+                    </div>
+                    <div *ngFor="let eachObj of eachQuestion.question; let objIndex = index;" class="my-2">
+                        <div class="d-flex col-12 px-0">
+                                <div class="col-6 pl-0 form-group">
+                                    <label class="head">Select Business Component</label>
+                                    <div class="d-flex align-items-center mb-3" *ngFor="let item of eachObj.component, let compInd = index">
+                                        <div class="form-control d-flex justify-content-between cursor-pointer"
+                                            (click)="openList(objectListModal,questionIndex,objIndex, compInd)">
+                                            <span>{{item.bussComp}}</span>
+                                            <!-- <img src="../../../../../assets/images/add.svg" width="20" alt=""> -->
+                                        </div>
+                                        <div class="pl-3">
+                                            <button class="btn common-add_btn" type="button" (click)="addContext(questionIndex,objIndex)">
+                                                <img src="./assets/images/add.svg" class="btn-case_add">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- <div class="form-group col-6 px-0">
+                                <label class="head">Add Comment</label>
+                                <textarea placeholder="Add a comment" class="form-control" rows="1"></textarea>
+                            </div> -->
+                            
+                        </div>
+
+                        <!-- <div class="d-flex col-12 px-0" *ngIf="eachQuestion.selected">
+                            <div class="col-6 pl-0 form-group">ng 
+                                <label class="head">Contexts</label>
+                                <div class="form-control d-flex justify-content-between cursor-pointer" (click)="openList(objectListModal,'subModuleSelection', questionIndex)">
+                                    <span [innerHTML]="subModuleSelectedName"></span>
+                                    <img src="../../../../../assets/images/add.svg" width="20" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group col-6 px-0">
+                                <label>Add Comment</label>
+                                <textarea placeholder="Add a comment" class="form-control" rows="1"></textarea>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="d-flex col-12 px-0" *ngIf="eachQuestion.selected && subModuleSelection">
+                            <div class="col-6 pl-0 form-group">
+                                <label class="head">Select Business Component</label>
+                                <div class="form-control d-flex justify-content-between cursor-pointer" (click)="openList(objectListModal, 'bcSelection', questionIndex)">
+                                    <span [innerHTML]="selectedBCName"></span>
+                                    <img src="../../../../../assets/images/add.svg" width="20" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group col-6 px-0">
+                                <label>Add Comment</label>
+                                <textarea placeholder="Add a comment" class="form-control" rows="1"></textarea>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="d-flex col-12 px-0">
+                            <div class="col-6 pl-0 form-group">
+                                <input list="businessComp" class="form-control" placeholder="Select Business Components">
+                                <datalist id="businessComp">
+                                    <option>Need Integrated Solutions</option>
+                                    <option>Response Time</option>
+                                    <option>Delayed Sales Follow-Up</option>
+                                </datalist>
+                                <div class="form-arrow-icon">
+                                    <img src="../../../../../assets/images/arrow-right1.svg" class="arrow-down" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group col-6 px-0">
+                                <textarea placeholder="Add a comment" class="form-control" rows="1"></textarea>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="comment" class="case-title">Comment for section</label>
+                    <quill-editor></quill-editor>
+                    </div>
+                </form>
+            
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+</div>
+
+<ng-template #objectListModal let-modal>
+    <div class="modal-header justify-content-center">
+        <h3 class="page-heading" [innerHTML]="modalHeading"></h3>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="filter d-flex align-items-center mx-2">
+            <input type="text" class="form-control" placeholder="Search here">
+            <img src="assets/images/search.svg">
+        </div>
+    </div>
+
+    <div class="modal-body p-4 m-4 submodule-container">
+        <div class="row m-0" *ngIf="!showSubModule && !showBC">
+            <label class="card-checkbox mx-3 mb-4" (click)="selectModule(module)"
+                *ngFor="let module of modules, let i = index">
+                <input type="radio" value="" name="category" class="d-none">
+                <div class="card-content">
+                    <div class="card-layout d-flex justify-content-center align-items-center">
+                        <img class="card-icon" [src]="module.moduleIcon">
+                        <span class="info-icon">
+                            <img src="./assets/images/play.svg">
+                            <img src="./assets/images/attachment.svg">
+                            <img src="./assets/images/info-icon.svg">
+                        </span>
+                    </div>
+                    <div class="card-name mt-3">{{module.moduleName}}</div>
+                </div>
+            </label>
+        </div>
+        <div class="row m-0" *ngIf="showSubModule">
+            <label class="card-checkbox mx-3 mb-4" (click)="selectSubModule(submodule)"
+                *ngFor="let submodule of subModules, let i = index">
+                <input type="radio" value="" name="category" class="d-none">
+                <div class="card-content">
+                    <div class="card-layout d-flex justify-content-center align-items-center">
+                        <img class="card-icon" [src]="submodule.subModuleIcon">
+                        <span class="info-icon">
+                            <img src="./assets/images/play.svg">
+                            <img src="./assets/images/attachment.svg">
+                            <img src="./assets/images/info-icon.svg">
+                        </span>
+                    </div>
+                    <div class="card-name mt-3">{{submodule.subModuleName}}</div>
+                </div>
+            </label>
+        </div>
+        <div class="row m-0" *ngIf="showBC">
+            <label class="card-checkbox mx-3 mb-4"
+                *ngFor="let BCs of businessComp, let i = index" (click)="selectBCs(BCs)">
+                <input type="radio" value="" name="category" class="d-none">
+                <div class="card-content">
+                    <div class="card-layout d-flex justify-content-center align-items-center">
+                        <img class="card-icon" [src]="BCs.businessCompIcon">
+                        <span class="info-icon">
+                            <img src="./assets/images/play.svg">
+                            <img src="./assets/images/attachment.svg">
+                            <img src="./assets/images/info-icon.svg">
+                        </span>
+                    </div>
+                    <div class="card-name mt-3">{{BCs.businessCompName}}</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="text-center mb-3">
+        <button type="button" (click)="subModuleSelected(objectListModal)" class="btn add-btn">CONTINUE</button>
+    </div>
+
+</ng-template>

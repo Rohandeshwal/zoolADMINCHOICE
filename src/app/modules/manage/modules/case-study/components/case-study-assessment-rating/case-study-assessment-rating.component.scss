@@ -1,0 +1,24 @@
+@import '../../../../../../../assets/styles/common.scss';
+
+.assessment-container{
+    background: #e2e3e5f5;
+    transition: 0.2s all;
+    border: 1px solid #c5bebe;
+    margin-bottom: 8px;
+    .common-remove_btn{
+        background: none;
+        /* padding: 0px 10px; */
+        width:30px;
+        height: 41px;
+        margin: 0 6px;
+    }
+    .common-add_btn{
+        position: relative;
+        right: 6px;
+    }
+}
+@media  screen and (max-width:1280px) and (min-width:800px){
+    .form-control{
+        font-size:12px;
+    }
+}

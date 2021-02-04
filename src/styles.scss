@@ -1,0 +1,388 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/styles/variable.scss";
+@import "../src/assets/styles/common.scss";
+
+// Ag Grid Styling imports
+
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.ag-theme-alpine {
+  @include ag-theme-alpine();
+}
+
+.edit-side-img {
+  height: 15px !important;
+}
+
+.ag-theme-alpine .ag-filter-toolpanel-header,
+.ag-theme-alpine .ag-filter-toolpanel-search,
+.ag-theme-alpine .ag-status-bar,
+.ag-theme-alpine .ag-header-row,
+.ag-theme-alpine .ag-panel-title-bar-title {
+  background: white !important;
+}
+
+// Global styling
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+  background: $primaryBiege !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+.scroll-body {
+  height: calc(100vh - 84px);
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+input,
+button {
+  &:active,
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// .page-heading {
+//   color: $primaryMidnightBlue;
+//   font-size: $primaryHeaderTop;
+//   font-family: $primaryFontFamily;
+//   font-family: $primaryFontFamily;
+// }
+
+// .page-sub-heading {
+//   color: $primaryGrey;
+//   font-family: $primaryFontFamily;
+//   font-size: $primaryFontSize;
+//   line-height: 1.3;
+// }
+
+.sidebar-accordion {
+  .accordion {
+    width: 100%;
+
+    .btn-link {
+      text-align: left !important;
+      display: flex !important;
+      padding: 6px 10px !important;
+      width: 100% !important;
+      height: 100% !important;
+      font-size: $tertiaryFontSize !important;
+      padding: 1px 9px !important;
+      color: white !important;
+      align-items: center;
+      font-weight: 500 !important;
+      //  margin-left: -12px !important;
+      margin: 0px !important;
+
+      &:hover,
+      &:focus,
+      &:visited {
+        color: white !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+.block-display,
+app-add-manage-object {
+  display: block;
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// input{
+//  &:placeholder{
+//     color: red;
+// }
+// }
+
+// multiselect dropdown
+
+.multiselect-dropdown {
+  .dropdown-btn {
+    border-radius: 5px !important;
+    box-shadow: 0px 2px 3px $primaryColor3 !important;
+    opacity: 1 !important;
+    border: $primaryWhite !important;
+    background-color: $primaryWhite;
+  }
+
+  .selected-item {
+    border: 1px solid #9f9f9f !important;
+    border-radius: 16px !important;
+    color: #373737 !important;
+    background: $primaryWhite !important;
+  }
+
+  .dropdown-down {
+    border: none !important;
+    display: none !important;
+  }
+
+  .dropdown-up {
+    border: none !important;
+    display: none !important;
+  }
+}
+
+.dropdown-list {
+  box-shadow: 0px 3px 4px $primaryColor3 !important;
+  border: none;
+  padding: 0px 11px !important;
+
+  .multiselect-item-checkbox input[type="checkbox"]:checked + div:before {
+    background: $primaryOrange !important;
+  }
+
+  .multiselect-item-checkbox input[type="checkbox"] + div:before {
+    border: 1px solid #dcdcdc !important;
+    border-radius: 4px !important;
+  }
+
+  .multiselect-item-checkbox input[type="checkbox"] + div:after {
+    left: 3px !important;
+    width: 7px !important;
+    height: 3px !important;
+  }
+}
+
+.w-10 {
+  width: 10% !important;
+}
+
+// tabs
+.case-study_tab {
+  position: relative;
+  top: 10px;
+
+  ul.nav.nav-pills {
+    padding: 0 10px;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    font-size: $tertiaryFontSize;
+    color: black;
+    background-color: transparent;
+    border-bottom: 3px solid orange;
+    border-radius: 0;
+    font-weight: bold;
+  }
+
+  .nav-pills .nav-link {
+    color: black;
+    font-size: $tertiaryFontSize;
+  }
+}
+
+// ngx-file
+.tox-tinymce {
+  height: 214px !important;
+  width: 100% !important;
+  box-shadow: 0px 2px 3px $primaryColor3 !important;
+}
+
+.tox-statusbar {
+  display: none !important;
+}
+
+.ngx-file-drop__content {
+  height: unset !important;
+}
+
+.ngx-file-drop__drop-zone {
+  height: unset !important;
+  margin: unset !important;
+  border: unset !important;
+  border-radius: unset !important;
+}
+
+.tabs {
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: #000 !important;
+    background-color: none !important;
+    background: none !important;
+    /* border: 2px solid orange; */
+    border-bottom: 2px solid orange !important;
+    border-radius: 0px !important;
+  }
+
+  a {
+    color: #000;
+  }
+}
+
+// Sub Module Component Modal
+
+.modal {
+  .modal-dialog {
+    width: 650px !important;
+    // max-width: 650px !important;
+    margin: 4.75rem auto !important;
+    background: $primaryBiege;
+
+    .modal-content {
+      background: $primaryBiege !important;
+
+      .modal-header {
+        font-weight: bold;
+        border-bottom: none !important;
+      }
+
+      .submodule-container {
+        height: 360px;
+        overflow: auto;
+        background: $primaryWhite;
+        border: 1px solid $primaryBiege;
+        box-shadow: $primaryBoxShadow;
+      }
+    }
+  }
+}
+
+app-hierarchy {
+  .dropdown-toggle {
+    white-space: nowrap;
+  }
+
+  .dropdown-menu {
+    font-size: 12px !important;
+
+    .dropdown-item {
+      &:hover {
+        background: $primaryOrange !important;
+      }
+
+      &:active {
+        background: $primaryMidnightBlue !important;
+      }
+    }
+  }
+}
+
+.nav-tabs {
+  .nav-link {
+    // border: none !important;
+  }
+
+  a {
+    color: $primaryOrange;
+  }
+}
+
+ngb-tooltip-window {
+  &.show {
+    .arrow {
+      &:before {
+        border-bottom-color: #969292 !important;
+      }
+    }
+
+    .tooltip-inner {
+      padding: 3px !important;
+      width: 202px !important;
+      background: #969292 !important;
+      font-size: 12px !important;
+      color: white !important;
+    }
+  }
+}
+
+.ngx-pagination {
+  text-align: center !important;
+  margin-bottom: 0 !important;
+  margin-top: 1rem !important;
+  padding-left: 0 !important;
+
+  .current {
+    background: #707070 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.e-rte-content {
+  height: 200px !important;
+  margin-top: 26px !important;
+}
+
+//quill
+.ql-snow .ql-tooltip {
+  left: 21.984px !important;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 160px !important;
+  background: white !important;
+}
+
+//remove danger-icon after error
+
+input:valid {
+  background-image: none !important;
+}
+
+input:invalid {
+  background-image: none !important;
+}
+
+select:valid {
+  background-image: none !important;
+  line-height: 1.5em;
+}
+
+select:invalid {
+  background-image: none !important;
+  line-height: 1.5em;
+}
+
+textarea:valid {
+  background-image: none !important;
+}
+
+textarea:invalid {
+  background-image: none !important;
+}
+
+#Search::-webkit-search-cancel-button {
+  position: relative !important;
+  right: 45px !important;
+}
+
+//styles select
+
+.ng-select.custom {
+  border: 0px;
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.ng-select.custom .ng-select-container {
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.ng-select.custom ::ng-deep .ng-select-container {
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.bggraph {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='a' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath stroke-width='.5' stroke='%23e0e0e0' fill='transparent' d='M0 0h10v10H0z'/%3E%3C/pattern%3E%3C/defs%3E%3Cpath fill='url(%23a)' stroke='%23E0E0E0' d='M0 0h100v100H0z'/%3E%3C/svg%3E");
+  text-align: left;
+}

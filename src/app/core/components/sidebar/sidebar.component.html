@@ -1,0 +1,79 @@
+<div class="sidebar-wrapper sidebar-accordion">
+  <div class="sidebar-fluid">
+    <ul class="content">
+      <!-- <li class="login">
+        <a class="login-icon" routerLinkActive="active-link" routerLink="/dashboard">
+          <span> <img src="./assets/images/home.svg" alt="" /> </span>
+          <span class="login-text">Home</span>
+        </a>
+      </li> -->
+      <br />
+      <li class="home d-flex" *ngFor="let item of sidebarConfig?.parentItems">
+        <div class="side-icon">
+          <ngb-accordion (panelChange)="beforeChange($event)">
+            <ngb-panel id="preventchange-1">
+              <ng-template ngbPanelTitle>
+                <span
+                  class="img-icons"
+                  *ngIf="item?.route !== ''"
+                  routerLink="{{ item?.route }}"
+                >
+                  <i class="{{ item?.icon }}" aria-hidden="true"></i>
+
+                  <!-- <img src="{{ item?.img }}" alt="" class="svg-img" /> -->
+
+                  {{ item?.name }}</span
+                >
+
+                <span class="img-icons" *ngIf="item?.route === ''">
+                  <i class="{{ item?.icon }}" aria-hidden="true"></i>
+
+                  <!-- <img src="{{ item?.img }}" alt="" class="svg-img" /> -->
+
+                  {{ item?.name }}</span
+                >
+
+                <span class="arrow">
+                  <i
+                    class="fa fa-chevron-right"
+                    *ngIf="item?.children?.length > 0"
+                  ></i>
+
+                  <!-- <img
+                    *ngIf="item?.children?.length > 0"
+                    src="./assets/images/arrow-right1.svg"
+                    alt=""
+                /> -->
+                </span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <ul>
+                  <a
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: false }"
+                    *ngFor="let child of item?.children"
+                    class="objects"
+                    routerLink="{{ child?.route }}"
+                  >
+                    {{ child?.name }}
+                  </a>
+                </ul>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </li>
+      <li class="login" routerLinkActive="active-link" routerLink="/auth/login">
+        <a
+          class="login-icon"
+          routerLinkActive="active-link"
+          routerLink="/auth/login"
+        >
+          <span class="logout=icon"><i class="fa fa-sign-out"></i> </span>
+
+          <span class="login-text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

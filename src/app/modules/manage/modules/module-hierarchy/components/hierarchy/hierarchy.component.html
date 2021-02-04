@@ -1,0 +1,17 @@
+<div class="add-wrapper">
+  <div class="add-header d-flex justify-content-between">
+    <h2 class="heading align-self-center" [innerHTML]="headingText">
+      Value Design Hierarchy View
+    </h2>
+  </div>
+
+  <div id="full-container" class="bggraph">
+    <div class="items-container">
+      <app-hierarchy-child-template
+        [charData]="hierarchyData"
+        (selectedObj)="getParentChildData($event)"
+        (selectedRelationObj)="getRelationData($event)"
+      ></app-hierarchy-child-template>
+    </div>
+  </div>
+</div>
